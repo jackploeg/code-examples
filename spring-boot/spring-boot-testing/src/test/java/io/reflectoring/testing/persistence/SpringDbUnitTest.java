@@ -35,6 +35,8 @@ class SpringDbUnitTest {
   void whenInitializedByDbUnit_thenFindsByName() {
     UserEntity user = userRepository.findByName("Zaphod Beeblebrox");
     assertThat(user).isNotNull();
+    user = userRepository.findByName("Cynthia Mascolores");
+    assertThat(user).isNotNull();
   }
 
 }
